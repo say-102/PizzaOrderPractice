@@ -2,9 +2,13 @@ package com.linkinblo.pizzaorderpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.linkinblo.pizzaorderpractice.adapters.MyViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import kr.co.tjoeun.lifecycle_20201114.BaseActivity
 
 class MainActivity : BaseActivity() {
+
+    lateinit var myViewPagerAdapter: MyViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +22,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+
+        myViewPagerAdapter = MyViewPagerAdapter(supportFragmentManager)
+        myViewPager.adapter = myViewPagerAdapter
 
     }
 
