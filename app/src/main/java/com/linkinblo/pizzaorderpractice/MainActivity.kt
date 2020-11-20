@@ -2,11 +2,17 @@ package com.linkinblo.pizzaorderpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.linkinblo.pizzaorderpractice.adapters.MyViewPagerAdapter
+import com.linkinblo.pizzaorderpractice.adapters.PizzaAdapter
+import com.linkinblo.pizzaorderpractice.datas.Store
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_pizza_store.*
+import kotlinx.android.synthetic.main.pizza_store_list_item.*
 import kr.co.tjoeun.lifecycle_20201114.BaseActivity
 
 class MainActivity : BaseActivity() {
+
 
     lateinit var myViewPagerAdapter: MyViewPagerAdapter
 
@@ -19,6 +25,11 @@ class MainActivity : BaseActivity() {
 
     override fun setupEvents() {
 
+        pizzaStoreListView.setOnItemClickListener { parent, view, position, id ->
+
+        }
+
+
     }
 
     override fun setValues() {
@@ -27,6 +38,7 @@ class MainActivity : BaseActivity() {
         myViewPager.adapter = myViewPagerAdapter
 
         myTabLayout.setupWithViewPager(myViewPager)
+
 
     }
 
