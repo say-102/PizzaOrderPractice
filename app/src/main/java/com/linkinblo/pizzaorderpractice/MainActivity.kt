@@ -25,10 +25,6 @@ class MainActivity : BaseActivity() {
 
     override fun setupEvents() {
 
-        pizzaStoreListView.setOnItemClickListener { parent, view, position, id ->
-
-        }
-
 
     }
 
